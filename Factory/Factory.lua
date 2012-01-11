@@ -1,4 +1,4 @@
---dofile([[X:\users\lpberg\VRJuggLua\examples\lys\simpleLights.lua]])
+dofile([[X:\users\lpberg\VRJuggLua\examples\lys\simpleLights.lua]])
 require("DebugAxes")
 require("getScriptFilename")
 vrjLua.appendToModelSearchPath(getScriptFilename())
@@ -520,5 +520,5 @@ forklift = Transform {
 }	
 forkliftmatrix:addChild(forklift)
 factory:addChild(forkliftmatrix)
-
-return factory
+RelativeTo.World:addChild(factory)
+--return factory
